@@ -12,10 +12,10 @@ llm = ChatGroq(model="openai/gpt-oss-20b", temperature=0)
 
 FIELDS = {
     "date":   r"(\d{4}-\d{2}-\d{2})",
-    "amount": r"(\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?)",
-    "id":     r"((?:INV|REQ|ORD)-\d+)",
+    "amount": r"(\$\d{1,3}(\d{3})*(\d{2}))",
+    "id":     r"((INV|REQ|ORD)-\d+)",
     "ticket": r"ticket #(\d+)",
-    "phone":  r"(\+91[ -]?\d{5}[ -]?\d{5})",
+    "phone":  r"(\+91[ -]\d{5}[ -]\d{5})",
 }
 
 
